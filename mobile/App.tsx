@@ -10,7 +10,7 @@ import {
 
 // components
 import Loading from "./src/Components/Loading";
-import Home from "./src/Screens/Home";
+import Routes from "./src/routes";
 import React from "react";
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <>
-      <Home />
+      <Routes />
       <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
     </>
   );
