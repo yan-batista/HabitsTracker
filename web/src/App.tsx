@@ -1,20 +1,16 @@
-import GlobalStyles from "./styles/GlobalStyles";
+import "./styles/global.css";
 
-import { Center, MainContainer } from "./styles";
-import Header from "./components/Header/index";
-import SummaryTable from "./components/SummaryTable/index";
+import Header from "./components/Header";
+import SummaryTable from "./components/SummaryTable";
 
 function App() {
   return (
-    <>
-      <Center className="App">
-        <MainContainer>
-          <Header />
-          <SummaryTable />
-        </MainContainer>
-      </Center>
-      <GlobalStyles />
-    </>
+    <div className="w-screen h-screen flex justify-center items-center">
+      <div className="w-full max-w-5xl px-6 flex flex-col gap-16">
+        <Header />
+        <SummaryTable />
+      </div>
+    </div>
   );
 }
 
