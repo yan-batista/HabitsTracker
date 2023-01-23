@@ -10,8 +10,9 @@ app.register(cors);
 
 app
   .listen({
-    port: PORT,
+    port: 3333,
+    host: "0.0.0.0",
   })
   .then(() => {
-    console.log(`Server running on port ${PORT}`);
+    console.log("HTTP Server running!");
   });
