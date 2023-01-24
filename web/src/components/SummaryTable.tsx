@@ -42,7 +42,12 @@ const SummaryTable = () => {
       });
 
       return (
-        <HabitDay key={date.toString()} date={date} amount={dayInSummary?.amount} completed={dayInSummary?.completed} />
+        <HabitDay
+          key={date.toString()}
+          date={date}
+          amount={dayInSummary?.amount}
+          defaultCompleted={dayInSummary?.completed}
+        />
       );
     });
   };
@@ -51,7 +56,7 @@ const SummaryTable = () => {
     <div className="w-full flex">
       <div className="grid grid-rows-7 grid-flow-row gap-3">{generateGridDays()}</div>
       <div className="grid grid-rows-7 grid-flow-col gap-3">
-        {generateGridDates()}
+        {summary.length > 0 && generateGridDates()}
         {amountOfDaysToFill > 0 &&
           Array.from({ length: amountOfDaysToFill }).map((_, idx) => {
             return (
